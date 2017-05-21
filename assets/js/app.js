@@ -1,6 +1,6 @@
-angular
-  .module('MyApp',['ngMaterial', 'ngMessages', 'material.svgAssetsCache'])
-  .controller('BaseCtrl', BaseCtrl);
+var app = angular.module('MyApp',['ngMaterial', 'ngMessages', 'material.svgAssetsCache']);
+
+app.controller('BaseCtrl', BaseCtrl);
 
 BaseCtrl.$inject = ['$scope'];
 
