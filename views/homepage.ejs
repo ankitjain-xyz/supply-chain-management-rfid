@@ -1,0 +1,112 @@
+<!--Header-->
+  <header>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h1>Supply Chain Management - RFID tracker</h1>
+        <span flex></span>
+      </div>
+    </md-toolbar>
+  </header>
+  <div ng-cloak="" class="tabsdemoDynamicHeight" ng-app="MyApp" ng-controller="BaseCtrl">
+    <md-content>
+      <md-tabs md-dynamic-height="" md-border-bottom="">
+        <!--Tab one -> Register the readers-->
+        <md-tab label="RFID Readers">
+          <md-content class="md-padding">
+            <h1 class="md-display-2">Getting started</h1>
+            <p>Register the RFID readers and their physical locations</p>
+            <md-table-container>
+              <table>
+                <thead>
+                  <tr md-row>
+                    <th md-column >Reader ID</th>
+                    <th md-column >Reader Value</th>
+                  </tr>
+                </thead>
+                <tbody md-body>
+                  <tr md-row ng-repeat="reader in readers">
+                    <td md-cell>{{reader.id}}</td>
+                    <td md-cell>{{reader.reader}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </md-table-container>
+          </md-content>
+        </md-tab>
+        <!--Tab two -> Register the tags-->
+        <md-tab label="RFID Tags">
+          <md-content class="md-padding">
+            <h1 class="md-display-2">Register tags</h1>
+            <p>Assign the RFID tags certain values</p>
+            <md-table-container>
+              <table>
+                <thead>
+                  <tr md-row>
+                    <th md-column >Tag ID</th>
+                    <th md-column >Tag Value</th>
+                  </tr>
+                </thead>
+                <tbody md-body>
+                  <tr md-row ng-repeat="tag in tags">
+                    <td md-cell>{{tag.id}}</td>
+                    <td md-cell>{{tag.tag}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </md-table-container>
+          </md-content>
+        </md-tab>
+        </md-tab>
+        <!--Tab three -> Register the assets-->
+        <md-tab label="Assets">
+          <md-content class="md-padding">
+            <h1 class="md-display-2">Declare Assets</h1>
+            <p>Register the assets with RFID tags</p>
+            <md-table-container>
+              <table>
+                <thead>
+                  <tr md-row>
+                    <th md-column >Name</th>
+                    <th md-column >Tag ID</th>
+                    <th md-column >Current Reader ID</th>
+                  </tr>
+                </thead>
+                <tbody md-body>
+                  <tr md-row ng-repeat="asset in assets">
+                    <td md-cell>{{asset.name}}</td>
+                    <td md-cell>{{asset.tagID}}</td>
+                    <td md-cell>{{asset.currentReaderId}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </md-table-container>
+          </md-content>
+        </md-tab>
+        <!--Tab four -> Track the assets-->
+        <md-tab label="Events">
+          <md-content class="md-padding">
+            <h1 class="md-display-2">Gain Insight</h1>
+            <p>Find out where the Asset is, or the last known location it was seen</p>
+            <md-table-container>
+              <table>
+                <thead>
+                  <tr md-row>
+                    <th md-column >Tag ID</th>
+                    <th md-column >Reader ID</th>
+                    <th md-column md-numeric>RSSI</th>
+                  </tr>
+                </thead>
+                <tbody md-body>
+                  <tr md-row ng-repeat="event in events">
+                    <td md-cell>{{event.tag}}</td>
+                    <td md-cell>{{event.reader}}</td>
+                    <td md-cell>{{event.rssi}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </md-table-container>
+          </md-content>
+        </md-tab>
+      </md-tabs>
+    </md-content>
+  </div>
