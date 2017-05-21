@@ -1,4 +1,4 @@
-var app = angular.module('MyApp', [ 'ngMaterial', 'ngMessages', 'material.svgAssetsCache' ]);
+var app = angular.module('MyApp', [ ]);
 app.controller('BaseCtrl', ['$scope', function ($scope){
 
   /*function findIndex(arr, destroyedID) {
