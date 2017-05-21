@@ -1,6 +1,10 @@
-var app = angular.module("MyApp",["ngMaterial", "ngMessages", "material.svgAssetsCache"]);
-app.controller("BaseCtrl", ["$scope", function ($scope){
+angular
+  .module('MyApp',['ngMaterial', 'ngMessages', 'material.svgAssetsCache'])
+  .controller('BaseCtrl', BaseCtrl);
 
+BaseCtrl.$inject = ['$scope'];
+
+function BaseCtrl($scope) {
   function findIndex(arr, destroyedID) {
     var index = -1;
     var val = destroyedID;
@@ -109,5 +113,5 @@ app.controller("BaseCtrl", ["$scope", function ($scope){
         updateUI($scope.events, event.previous.id, event.data);
         break;
     }
-  });
-}]);
+  });	
+}
