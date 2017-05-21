@@ -25,7 +25,6 @@
     "sails-mongo": "^0.12.2"
   },
   "scripts": {
-    "postinstall": "grunt uglify",
     "start": "node app.js",
     "debug": "node debug app.js"
   },

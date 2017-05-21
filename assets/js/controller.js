@@ -1,7 +1,7 @@
 var app = angular.module('MyCtrl', []);
 app.controller('BaseCtrl', ['$scope', function ($scope){
 
-/*  function findIndex(arr, destroyedID) {
+  function findIndex(arr, destroyedID) {
     var index = -1;
     var val = destroyedID;
     var filteredObj = arr.find(function(item, i){
@@ -109,7 +109,7 @@ app.controller('BaseCtrl', ['$scope', function ($scope){
         updateUI($scope.events, event.previous.id, event.data);
         break;
     }
-  });*/
+  });
 
 
 }]);
