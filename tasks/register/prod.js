@@ -12,7 +12,7 @@
  *
  */
 module.exports = function(grunt) {
-  grunt.registerTask('heroku:production', [
+  grunt.registerTask('prod', [
     'compileAssets',
     'concat',
     'uglify',
